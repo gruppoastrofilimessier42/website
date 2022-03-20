@@ -1,0 +1,17 @@
+myProject
+    docker-compose.yml
+    api
+        .env
+    admin
+        .env
+    site
+        .env
+    db
+        .env
+    traefik
+        .env
+        certs
+    .gitignore
+    README.md
+    .env
+    Makefile
