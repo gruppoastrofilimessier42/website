@@ -1,0 +1,15 @@
+module.exports.authService = require("./auth.service");
+module.exports.tokenService = require("./token.service");
+module.exports.userService = require("./user.service");
+module.exports.emailService = require("./email.service");
+module.exports.uploadService = require("./upload.service");
+module.exports.uploadGrantService = require("./uploadGrant.service");
+module.exports.whatsHotService = require("./whatsHot.service");
+module.exports.reviewService = require("./review.service");
+module.exports.partnerService = require("./partner.service");
+module.exports.appFeatureService = require("./appFeature.service");
+module.exports.blogCategoryService = require("./blogCategory.service");
+module.exports.blogArticleService = require("./blogArticle.service");
+module.exports.faqService = require("./faq.service");
+module.exports.tutorialService = require("./tutorial.service");
+module.exports.teamMemberService = require("./teamMember.service");

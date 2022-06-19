@@ -1,0 +1,21 @@
+services:
+  admin:
+    build:
+      context: admin
+      target: production
+  api:
+    build:
+      context: api
+      target: production
+  db:
+    build:
+      context: db
+      target: production
+  site:
+    build:
+      context: site
+      target: production
+  smtp:
+    build:
+      context: smtp
+      target: production

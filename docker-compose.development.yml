@@ -1,0 +1,49 @@
+services:
+  admin:
+    build:
+      context: admin
+      target: development
+    env_file: ./admin/src/.env
+    volumes:
+      - ./admin/src:/src:cached
+      - admin-yarn-cache:/home/node/.cache/yarn:delegated
+
+  api:
+    build:
+      context: api
+      target: development
+    ports:
+      - 9229:9229
+    env_file: ./api/src/.env
+    volumes:
+      - ./api/src:/src:cached
+      - api-yarn-cache:/home/node/.cache/yarn:delegated
+
+  db:
+    build:
+      context: db
+      target: development
+    env_file: ./db/.env
+    ports:
+      - 3307:3306
+
+  site:
+    build:
+      context: site
+      target: development
+    env_file: ./site/src/.env
+    volumes:
+      - ./site/src:/src:cached
+      - site-yarn-cache:/home/node/.cache/yarn:delegated
+
+  smtp:
+    build:
+      context: smtp
+      target: development
+    env_file:
+      - ./smtp/.env
+
+volumes:
+  admin-yarn-cache:
+  api-yarn-cache:
+  site-yarn-cache:

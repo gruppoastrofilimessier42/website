@@ -1,0 +1,6 @@
+module.exports = Object.freeze({
+  DUPLICATED_VALUE: "DUPLICATED_VALUE",
+  NOT_FOUND: "NOT_FOUND",
+  INVALID: "INVALID",
+  GENERIC: "GENERIC",
+});

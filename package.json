@@ -1,0 +1,28 @@
+{
+  "name": "gam42-website",
+  "version": "0.0.1",
+  "description": "The new gam42 website",
+  "repository": "https://github.com/gruppoastrofilimessier42/website.git",
+  "author": "Francesco Rotondo",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "generate-env development && docker-compose -f docker-compose.yml -f docker-compose.development.yml up -d --build",
+    "dev:stop": "docker-compose -f docker-compose.yml -f docker-compose.development.yml down",
+    "build": "generate-env production && docker compose -f docker-compose.yml -f docker-compose.build.yml build",
+    "build-pre": "generate-env pre-production && docker compose -f docker-compose.yml -f docker-compose.build.yml build",
+    "prepare": "husky install",
+    "release": "node .scripts/release.js",
+    "deploy": "node .scripts/deploy.js",
+    "sync-packagejson": "node .scripts/sync-packagejson.js"
+  },
+  "devDependencies": {
+    "@frazcake/generate-env": "^1.1.0",
+    "@frazcake/prettier-config": "^1.0.10",
+    "husky": "^8.0.1",
+    "prettier": "^2.6.2",
+    "read-env-file": "^2.0.3-0",
+    "rimraf": "^3.0.2"
+  },
+  "prettier": "@frazcake/prettier-config"
+}

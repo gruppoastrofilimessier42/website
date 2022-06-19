@@ -1,0 +1,18 @@
+BASEURL_ROOTDOMAIN="{{site.baseurl.rootDomain}}"
+
+# Compose
+COMPOSE_PROJECT_NAME="{{project.name}}"
+TRAEFIK_DOCKER_NETWORK="{{traefik.network}}"
+
+# Site
+SITE_TRAEFIK_ENTRYPOINT_HTTP="{{site.traefik.entrypoint.http}}"
+SITE_TRAEFIK_ENTRYPOINT_HTTPS="{{site.traefik.entrypoint.https}}"
+SITE_BASEURL_DOMAIN="{{site.baseurl.domain}}"
+
+# Admin
+ADMIN_TRAEFIK_ENTRYPOINT_HTTPS="{{admin.traefik.entrypoint.https}}"
+ADMIN_BASEURL_DOMAIN="{{admin.baseurl.domain}}"
+
+# Api
+API_TRAEFIK_ENTRYPOINT_HTTPS="{{api.traefik.entrypoint.https}}"
+API_BASEURL_DOMAIN="{{api.baseurl.domain}}"

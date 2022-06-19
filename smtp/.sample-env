@@ -1,0 +1,7 @@
+MAILNAME="smtp"
+MYNETWORKS="0.0.0.0/0"
+INET_PROTOCOLS="ipv4"
+RELAYHOST="{{smtp.host}}:{{smtp.port}}"
+RELAYHOST_AUTH="{{smtp.auth}}"
+RELAYHOST_PASSWORDMAP="{{smtp.host}}:{{smtp.user}}:{{smtp.password}}"
+USE_TLS="{{smtp.tls}}"

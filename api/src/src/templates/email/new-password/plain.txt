@@ -1,0 +1,5 @@
+Gentile utente,
+questa è la tua nuova password temporanea:
+  {{password}}
+Ti preghiamo di eseguire l'accesso e di cambiare la password.
+{{{changePasswordUrl}}}

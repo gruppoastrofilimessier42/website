@@ -1,0 +1,59 @@
+{
+  "rootDomain": "gam42.test",
+  "traefik": {
+    "network": "web"
+  },
+  "site": {
+    "traefik": {
+      "entrypoint": {
+        "http": "web",
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "www.gam42.test"
+    }
+  },
+  "api": {
+    "traefik": {
+      "entrypoint": {
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "api.gam42.test"
+    },
+    "jwt": {
+      "secret": "anAmazingSuperSecretWOW"
+    }
+  },
+  "db": {
+    "user": "admin",
+    "password": "admin",
+    "root": {
+      "password": "admin"
+    }
+  },
+  "admin": {
+    "traefik": {
+      "entrypoint": {
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "admin.gam42.it"
+    }
+  },
+  "smtp": {
+    "host": "smtp.ethereal.email",
+    "port": 587,
+    "auth": "yes",
+    "user": "catalina.okuneva53@ethereal.email",
+    "password": "3YVpPVcAq6KkV54gkG",
+    "tls": "no",
+    "from": "catalina.okuneva53@ethereal.email"
+  }
+}

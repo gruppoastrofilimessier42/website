@@ -1,0 +1,20 @@
+PORT=3000
+DATABASE_URL="{{db.type}}://{{db.user}}:{{db.password}}@{{db.host}}:{{db.port}}/{{db.name}}"
+JWT_SECRET={{api.jwt.secret}}
+JWT_ACCESS_EXPIRATION_MINUTES=30
+JWT_REFRESH_EXPIRATION_DAYS=30
+
+# SMTP configuration options for the email service
+SMTP_HOST=smtp
+SMTP_PORT=25
+SMTP_FROM="{{smtp.from}}"
+
+ADMIN_USER_FIRSTNAME=Admin
+ADMIN_USER_LASTNAME=Admin
+ADMIN_USER_EMAIL=admin@gam42.it
+ADMIN_USER_PASSWORD=mypass11
+
+API_URL="{{api.baseurl.schema}}://{{api.baseurl.domain}}"
+ADMIN_URL="{{admin.baseurl.schema}}://{{admin.baseurl.domain}}"
+
+MAX_UPLOAD_SIZE=50MB

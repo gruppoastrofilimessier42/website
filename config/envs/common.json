@@ -1,0 +1,16 @@
+{
+  "project": {
+    "name": "gam42-website"
+  },
+  "admin": {
+},
+  "db": {
+    "host": "db",
+    "type": "mysql",
+    "port": 3306,
+    "name": "gam42"
+  },
+  "site": {
+    "infoMail": "info@gam42.it"
+  }
+}

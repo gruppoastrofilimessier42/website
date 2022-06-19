@@ -1,0 +1,3 @@
+Gentile utente,
+per effettuare il reset della password, fai click sul seguente link: {{{resetPasswordUrl}}}
+Se non hai richiesto il reset della password, ignora questa email.

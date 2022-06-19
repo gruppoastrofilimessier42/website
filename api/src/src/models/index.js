@@ -1,0 +1,16 @@
+module.exports.Token = require("./token/token.model");
+module.exports.Translation = require("./translation/translation.model");
+module.exports.User = require("./user/user.model");
+module.exports.Translation = require("./translation/translation.model");
+module.exports.UploadGrant = require("./uploadGrant/uploadGrant.model");
+module.exports.Upload = require("./upload/upload.model");
+module.exports.UploadUnfinalized = require("./uploadUnfinalized/uploadUnfinalized.model");
+module.exports.WhatsHot = require("./whatsHot/whatsHot.model");
+module.exports.Review = require("./review/review.model");
+module.exports.Partner = require("./partner/partner.model");
+module.exports.AppFeature = require("./appFeature/appFeature.model");
+module.exports.BlogArticle = require("./blogArticle/blogArticle.model");
+module.exports.BlogCategory = require("./blogCategory/blogCategory.model");
+module.exports.Faq = require("./faq/faq.model");
+module.exports.Tutorial = require("./tutorial/tutorial.model");
+module.exports.TeamMember = require("./teamMember/teamMember.model");

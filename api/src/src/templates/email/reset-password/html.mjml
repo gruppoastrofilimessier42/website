@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          Gentile utente,<br />
+          per effettuare il reset della password, fai click sul bottone seguente:
+        </mj-text>
+        <mj-button href="{{{resetPasswordUrl}}}"> Reset password </mj-button>
+        <mj-text> Se non hai richiesto il reset della password, ignora questa email. </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

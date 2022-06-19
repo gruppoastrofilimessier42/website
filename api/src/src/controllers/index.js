@@ -1,0 +1,15 @@
+module.exports.authController = require("./auth.controller");
+module.exports.configurationController = require("./configuration.controller");
+module.exports.uploadController = require("./upload.controller");
+module.exports.uploadGrantController = require("./uploadGrant.controller");
+module.exports.meController = require("./me.controller");
+module.exports.userController = require("./user.controller");
+module.exports.whatsHotController = require("./whatsHot.controller");
+module.exports.reviewController = require("./review.controller");
+module.exports.partnerController = require("./partner.controller");
+module.exports.appFeatureController = require("./appFeature.controller");
+module.exports.blogCategoryController = require("./blogCategory.controller");
+module.exports.blogArticleController = require("./blogArticle.controller");
+module.exports.faqController = require("./faq.controller");
+module.exports.tutorialController = require("./tutorial.controller");
+module.exports.teamMemberController = require("./teamMember.controller");

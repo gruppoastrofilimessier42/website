@@ -1,0 +1,59 @@
+{
+  "rootDomain": "pre.gam42.it",
+  "traefik": {
+    "network": "web"
+  },
+  "site": {
+    "traefik": {
+      "entrypoint": {
+        "http": "web",
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "www.pre.gam42.it"
+    }
+  },
+  "api": {
+    "traefik": {
+      "entrypoint": {
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "pre.api.gam42.it"
+    },
+    "jwt": {
+      "secret": "omhmwmcotpppprreecgjothrmbjmedrimc42femowm2"
+    }
+  },
+  "db": {
+    "user": "admin",
+    "password": "admin",
+    "root": {
+      "password": "admin"
+    }
+  },
+  "admin": {
+    "traefik": {
+      "entrypoint": {
+        "https": "websecure"
+      }
+    },
+    "baseurl": {
+      "schema": "https",
+      "domain": "pre.admin.gam42.it"
+    }
+  },
+  "smtp": {
+    "host": "pre.smtp.gam42.it",
+    "port": 587,
+    "auth": "yes",
+    "user": "pre-relay@gam42.it",
+    "password": "",
+    "tls": "no",
+    "from": "pre-info@gam42.it"
+  }
+}
