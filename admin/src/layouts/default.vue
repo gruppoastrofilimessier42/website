@@ -94,17 +94,16 @@ export default {
     },
     menu() {
       return [
-        {},
-        // {
-        //   icon: "mdi-account-tie",
-        //   title: `navbar.administration`,
-        //   children: [
-        //     {
-        //       title: "entity.user.collection",
-        //       to: "/administration/users",
-        //     },
-        //   ],
-        // },
+        {
+          icon: "mdi-account-tie",
+          title: `navbar.administration`,
+          children: [
+            {
+              title: "entity.user.collection",
+              to: "/administration/users",
+            },
+          ],
+        },
       ];
     },
   },
