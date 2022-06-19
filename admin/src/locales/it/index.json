@@ -1,0 +1,212 @@
+{
+  "app": {
+    "name": "Gam 42",
+    "slogan": "Osservatorio astronomico lodigiano",
+    "version": "Versione"
+  },
+  "common": {
+    "actions": "Azioni",
+    "add": "Aggiungi",
+    "all": "Tutti",
+    "apply": "Applica",
+    "attachment": "Allegato",
+    "attachments": "Allegati",
+    "calculate": "Calcola",
+    "cancel": "Annulla",
+    "clear": "Azzera",
+    "close": "Chiudi",
+    "closed": "Chiuso",
+    "create": "Crea",
+    "dashboard": "Dashboard",
+    "data": "Dati",
+    "description": "Descrizione",
+    "download": "Download",
+    "dragToSort": "Trascina per riordinare",
+    "edit": "Modifica",
+    "email": "Email",
+    "empty": "(vuoto)",
+    "exit": "Esci",
+    "export": "Esporta",
+    "favourite": "Preferito",
+    "filters": "Filtri",
+    "from": "Da",
+    "grants": "Permessi",
+    "infos": "Informazioni",
+    "link": "Link",
+    "login": "Accedi",
+    "name": "Nome",
+    "new": "Nuovo",
+    "newNote": "Nuova @.lower:common.note",
+    "no": "No",
+    "notSuspended": "Non sospeso",
+    "note": "Nota",
+    "notes": "Note",
+    "ok": "Ok",
+    "opened": "Aperto",
+    "operationSuccess": "Operazione eseguita con successo!",
+    "preview": "Anteprima",
+    "previousNotes": "@:common.notes precedenti",
+    "readMore": "Scopri di più",
+    "save": "Salva",
+    "search": "Ricerca",
+    "signUp": "Registrati",
+    "suspended": "Sospeso",
+    "to": "A",
+    "total": "Totale",
+    "type": "Tipo",
+    "types": "Tipi",
+    "version": "Versione",
+    "warning": "Attenzione",
+    "yearTotal": "Totale annuo",
+    "yes": "Sì"
+  },
+  "entity": {
+    "appFeature": {
+      "collection": "Funzionalità app",
+      "field": {
+        "description": "Descrizione",
+        "image": "Immagine",
+        "order": "Ordine",
+        "title": "Titolo"
+      },
+      "name": "Funzionalità app"
+    },
+    "user": {
+      "collection": "Utenti",
+      "field": {
+        "email": "Email",
+        "firstName": "Nome",
+        "lastName": "Cognome",
+        "password": "Password",
+        "roles": "Ruoli",
+        "username": "Username"
+      },
+      "name": "Utente",
+      "role": {
+        "admin": "Amministratore"
+      }
+    }
+  },
+  "error": {
+    "form": {
+      "containsNumber": "Deve contenere almeno un carattere alfabetico e un carattere numerico",
+      "email": "Il campo non è un indirizzo email valido",
+      "invalid": "C'è stato un errore. \nVerifica la validità dei campi.",
+      "maxLength": "Lunghezza massima {max} caratteri",
+      "minLength": "Lunghezza minima {min} caratteri",
+      "passwordRule": "Deve contenere almeno un carattere alfabetico e un carattere numerico",
+      "range": "Il valore deve essere compreso o uguale a {min} - {max}",
+      "required": "Campo obbligatorio",
+      "sameAsPassword": "Le password sono diverse",
+      "wrongCredentials": "Le credenziali fornite non sono valide"
+    },
+    "generic": "Qualcosa è andato storto durante l'elaborazione.",
+    "page": {
+      "backHome": "Torna alla Home",
+      "downloadError": {
+        "description": "Il download della risorsa non è riuscito. \nPer favore riprova più tardi.",
+        "title": "Errore di download"
+      },
+      "genericError": {
+        "description": "@:error.generic",
+        "title": "Errore inaspettato"
+      },
+      "pageNotFound": {
+        "description": "Spiacenti, hai cercato una pagina che non esiste.",
+        "title": "Pagina non trovata"
+      }
+    }
+  },
+  "measurement": {
+    "currency": {
+      "euros": "€"
+    },
+    "geometry": {
+      "degrees": "º"
+    },
+    "length": {
+      "centimeters": "cm",
+      "decimeters": "dm",
+      "millimeters": "mm"
+    },
+    "math": {
+      "percentage": "%"
+    },
+    "time": {
+      "day": "Giorno",
+      "days": "Giorni",
+      "month": "Mese",
+      "months": "Mesi",
+      "week": "Settimana",
+      "weeks": "Settimane"
+    },
+    "weight": {
+      "kilos": "Kg"
+    }
+  },
+  "navbar": {
+    "administration": "Amministrazione",
+    "contents": "Contenuti",
+    "dashboard": "Dashboard"
+  },
+  "page": {
+    "changePassword": {
+      "chooseNewPassword": "Scegli la tua nuova password",
+      "currentPassword": "Password attuale",
+      "newPassword": "Nuova password",
+      "passwordChanged": "Password modificata con successo",
+      "repeatPassword": "Ripeti la password",
+      "resetPassword": "Reimposta password",
+      "title": "Cambia password",
+      "writeCurrentPassword": "Immetti la tua password attuale, per motivi di sicurezza"
+    },
+    "dashboard": {
+      "welcome": "Benvenuto"
+    },
+    "forgotPassword": {
+      "emailSent": "Email inviata correttamente",
+      "resetPassword": "Reimposta Password",
+      "subtitle": "Inserisci il tuo indirizzo email per reimpostarla",
+      "title": "Password dimenticata?"
+    },
+    "login": {
+      "forgotPassword": "Hai dimenticato la password?",
+      "login": "Login",
+      "subtitle": "Accedi con il tuo account",
+      "title": "Login utente",
+      "welcome": "Benvenuto"
+    },
+    "users": {
+      "create": {
+        "title": "Nuovo @.lower:entity.user.name"
+      },
+      "edit": {
+        "title": "Modifica @.lowe:entity.user.name"
+      },
+      "home": {
+        "title": "@:entity.user.collection"
+      }
+    }
+  },
+  "table": {
+    "action": {
+      "add": "@:common.new",
+      "changeStatus": "Cambia stato",
+      "changeStatusWithName": "Cambia stato \"{item}\"",
+      "confirmDeletion": "Sei sicuro di voler eliminare questo elemento?",
+      "confirmDeletionWithName": "Sei sicuro di voler eliminare \"{item}\"?",
+      "delete": "Elimina",
+      "deleteWithName": "Elimina \"{item}\"",
+      "display": "Visualizza",
+      "displayWithName": "Visualizza \"{elemento}\"",
+      "download": "Scarica",
+      "downloadWithName": "Scarica {elemento}",
+      "duplicate": "Duplicato",
+      "duplicateWithName": "Duplica \"{item}\"",
+      "edit": "@:common.edit",
+      "editWithName": "@:common.edit \"{item}\"",
+      "itemDeleted": "Elemento eliminato",
+      "itemDeletedWithName": "Elimina \"{item}\"."
+    }
+  }
+}

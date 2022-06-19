@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": [
+      "@nuxt/types",
+      "@nuxtjs/axios",
+      "@types/node",
+      "@nuxt/vue-app",
+      "@nuxtjs/vuetify",
+      "@nuxtjs/auth-next",
+      "@types/vuelidate",
+      "@nuxtjs/i18n",
+      "@nuxtjs/moment",
+      "vuetify-dialog/types"
+    ],
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}

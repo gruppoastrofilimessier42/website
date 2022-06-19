@@ -34,30 +34,30 @@ services:
     volumes:
       - db-data:/var/lib/mysql
 
-  site:
-    depends_on:
-      - api
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=${TRAEFIK_DOCKER_NETWORK:?}"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.rule=Host(`${SITE_BASEURL_DOMAIN:?}`,`${SITE_BASEURL_ROOTDOMAIN:?}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.entrypoints=${SITE_TRAEFIK_ENTRYPOINT_HTTP:?}"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.middlewares=${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.rule=Host(`${SITE_BASEURL_DOMAIN:?}`,`${SITE_BASEURL_ROOTDOMAIN:?}`)"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.entrypoints=${SITE_TRAEFIK_ENTRYPOINT_HTTPS:?}"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.middlewares=${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure"
-      - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.tls=true"
-      - "traefik.http.services.${COMPOSE_PROJECT_NAME:?}-site.loadbalancer.server.port=3000"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.regex=^http://([^/]+)"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.replacement=https://${SITE_BASEURL_DOMAIN:?}"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.permanent=true"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.regex=^https://${SITE_BASEURL_ROOTDOMAIN:?}/(.*)"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.replacement=https://${SITE_BASEURL_DOMAIN:?}/$${1}"
-      - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.permanent=true"
-    networks:
-      - default
-      - traefik
-    restart: always
+  # site:
+  #   depends_on:
+  #     - api
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.docker.network=${TRAEFIK_DOCKER_NETWORK:?}"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.rule=Host(`${SITE_BASEURL_DOMAIN:?}`,`${BASEURL_ROOTDOMAIN:?}`)"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.entrypoints=${SITE_TRAEFIK_ENTRYPOINT_HTTP:?}"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site-http.middlewares=${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.rule=Host(`${SITE_BASEURL_DOMAIN:?}`,`${BASEURL_ROOTDOMAIN:?}`)"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.entrypoints=${SITE_TRAEFIK_ENTRYPOINT_HTTPS:?}"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.middlewares=${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure"
+  #     - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-site.tls=true"
+  #     - "traefik.http.services.${COMPOSE_PROJECT_NAME:?}-site.loadbalancer.server.port=3000"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.regex=^http://([^/]+)"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.replacement=https://${SITE_BASEURL_DOMAIN:?}"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-http-redirect-websecure.redirectregex.permanent=true"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.regex=^https://${BASEURL_ROOTDOMAIN:?}/(.*)"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.replacement=https://${SITE_BASEURL_DOMAIN:?}/$${1}"
+  #     - "traefik.http.middlewares.${COMPOSE_PROJECT_NAME:?}-site-redirect-websecure.redirectregex.permanent=true"
+  #   networks:
+  #     - default
+  #     - traefik
+  #   restart: always
 
   smtp:
     restart: always

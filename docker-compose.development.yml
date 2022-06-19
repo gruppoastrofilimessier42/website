@@ -27,14 +27,14 @@ services:
     ports:
       - 3307:3306
 
-  site:
-    build:
-      context: site
-      target: development
-    env_file: ./site/src/.env
-    volumes:
-      - ./site/src:/src:cached
-      - site-yarn-cache:/home/node/.cache/yarn:delegated
+  # site:
+  #   build:
+  #     context: site
+  #     target: development
+  #   env_file: ./site/src/.env
+  #   volumes:
+  #     - ./site/src:/src:cached
+  #     - site-yarn-cache:/home/node/.cache/yarn:delegated
 
   smtp:
     build:

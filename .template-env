@@ -1,4 +1,4 @@
-BASEURL_ROOTDOMAIN="{{site.baseurl.rootDomain}}"
+BASEURL_ROOTDOMAIN="{{rootDomain}}"
 
 # Compose
 COMPOSE_PROJECT_NAME="{{project.name}}"

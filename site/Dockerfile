@@ -11,14 +11,14 @@ FROM node:lts-alpine as base
 EXPOSE 3000
 ENV HOST 0.0.0.0
 RUN apk update \
-    && apk add curl
+    && apk add curl autoconf automake libtool make tiff jpeg zlib zlib-dev pkgconf nasm file gcc musl-dev
 WORKDIR /src
 
 # Development environment
 FROM base as development
 ENV NODE_ENV=development
 RUN mkdir -p /home/node/.cache/yarn
-CMD yarn && yarn dev
+CMD yarn && yarn dev -L
 
 # Provides the source without package.json
 FROM base as source-nuller
@@ -33,7 +33,6 @@ RUN yarn --pure-lockfile
 COPY --from=source-nuller --chown=node:node /src /src
 RUN yarn build
 
-# Production environment
 FROM base as production
 ENV NODE_ENV=production
 HEALTHCHECK --interval=5s --timeout=2s --start-period=10s --retries=3 CMD curl --fail http://localhost:3000/healthcheck || exit 1

@@ -1,0 +1,49 @@
+@import "vendor/vuetify/utilities";
+@import "vendor/vuetify/input";
+@import "page-transitions";
+
+$v-row-hover-color: $primary-lighten;
+$v-row-selected-color: $primary-caption;
+
+.v-data-table:not(.custom-style) {
+  thead th {
+    white-space: nowrap;
+    background-color: #fff;
+  }
+  tbody {
+    tr:not(.v-row-group__header) {
+      &.v-data-table__selected {
+        background-color: $v-row-selected-color !important;
+      }
+      &:hover {
+        background-color: $v-row-hover-color !important;
+      }
+    }
+  }
+
+  .actions {
+    position: sticky;
+    border-left: #e0e0e0 solid 1px;
+    right: 0;
+  }
+
+  &:not(.no-zebra) {
+    tbody {
+      tr:not(.v-row-group__header) {
+        &:nth-of-type(odd) {
+          background-color: #f4f4f4;
+        }
+        &:nth-of-type(even) {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  td {
+    background-color: inherit;
+  }
+}
+
+.help-cursor {
+  cursor: help;
+}

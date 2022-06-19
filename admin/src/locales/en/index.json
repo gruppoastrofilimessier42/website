@@ -1,0 +1,202 @@
+{
+  "app": {
+    "name": "Gam42",
+    "slogan": "Astronomical observatory in Lodi",
+    "version": "Version"
+  },
+  "common": {
+    "actions": "Actions",
+    "add": "Add",
+    "all": "All",
+    "apply": "Apply",
+    "attachment": "Attachment",
+    "attachments": "Attachments",
+    "calculate": "Calculate",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "close": "Close",
+    "closed": "Closed",
+    "create": "Create",
+    "dashboard": "Dashboard",
+    "data": "Data",
+    "description": "Description",
+    "download": "Download",
+    "dragToSort": "Drag to sort",
+    "edit": "Edit",
+    "email": "Email",
+    "empty": "(empty)",
+    "exit": "Exit",
+    "export": "Export",
+    "favourite": "Favourite",
+    "filters": "Filters",
+    "from": "From",
+    "grants": "Grants",
+    "infos": "Informations",
+    "link": "Link",
+    "login": "Login",
+    "name": "Name",
+    "new": "New",
+    "newNote": "New @.lower:common.note",
+    "no": "No",
+    "notSuspended": "Not suspended",
+    "note": "Note",
+    "notes": "Notes",
+    "ok": "Ok",
+    "opened": "Open",
+    "operationSuccess": "Operation succesfully completed!",
+    "preview": "Preview",
+    "previousNotes": "Previous @:common.notes",
+    "readMore": "Read more",
+    "save": "Save",
+    "search": "Search",
+    "signUp": "Sign in",
+    "suspended": "Suspended",
+    "to": "To",
+    "total": "Total",
+    "type": "Type",
+    "types": "Types",
+    "version": "Version",
+    "warning": "Warning",
+    "yearTotal": "Year total",
+    "yes": "Yes"
+  },
+  "entity": {
+    "user": {
+      "collection": "Users",
+      "field": {
+        "email": "Email",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "password": "Password",
+        "roles": "Roles",
+        "username": "Username"
+      },
+      "name": "User",
+      "role": {
+        "admin": "Administrator"
+      }
+    }
+  },
+  "error": {
+    "form": {
+      "containsNumber": "Must contain at least one alphabetic character and a numeric character",
+      "email": "The field is not a valid email address",
+      "invalid": "An error has occurred. Check the validity of the fields.",
+      "maxLength": "Maximum length of {max} characters",
+      "minLength": "Minimum length of {min} characters",
+      "passwordRule": "Must contain at least one alphabetic character and one numeric character",
+      "range": "The value must be between or equal to {min} - {max}",
+      "required": "Required field",
+      "sameAsPassword": "The passwords are different",
+      "wrongCredentials": "The credentials provided are not valid"
+    },
+    "generic": "Something went wrong during processing.",
+    "page": {
+      "backHome": "Back to home",
+      "downloadError": {
+        "description": "The download of the resource failed. Please try again later.",
+        "title": "Download error"
+      },
+      "genericError": {
+        "description": "@:error.generic",
+        "title": "Unexpected error"
+      },
+      "pageNotFound": {
+        "description": "Sorry, you searched for a page that does not exist.",
+        "title": "Page not found"
+      }
+    }
+  },
+  "measurement": {
+    "currency": {
+      "euros": "€"
+    },
+    "geometry": {
+      "degrees": "º"
+    },
+    "length": {
+      "centimeters": "cm",
+      "decimeters": "dm",
+      "millimeters": "mm"
+    },
+    "math": {
+      "percentage": "%"
+    },
+    "time": {
+      "day": "Day",
+      "days": "Days",
+      "month": "Month",
+      "months": "Months",
+      "week": "Week",
+      "weeks": "Weeks"
+    },
+    "weight": {
+      "kilos": "Kg"
+    }
+  },
+  "navbar": {
+    "administration": "Administration",
+    "contents": "Contents",
+    "dashboard": "Dashboard"
+  },
+  "page": {
+    "changePassword": {
+      "chooseNewPassword": "Choose your new password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "passwordChanged": "Password changed successfully",
+      "repeatPassword": "Repeat password",
+      "resetPassword": "Reset password",
+      "title": "Change password",
+      "writeCurrentPassword": "Enter your current password, for security reasons"
+    },
+    "dashboard": {
+      "welcome": "Welcome"
+    },
+    "forgotPassword": {
+      "emailSent": "Email sent successfully",
+      "resetPassword": "Reset Password",
+      "subtitle": "Insert your email addres to reset it",
+      "title": "Forgot password?"
+    },
+    "login": {
+      "forgotPassword": "Forgot password?",
+      "login": "Log in",
+      "subtitle": "Log in with your business account",
+      "title": "User login",
+      "welcome": "Welcome"
+    },
+    "users": {
+      "create": {
+        "title": "New @.lower:entity.user.name"
+      },
+      "edit": {
+        "title": "Edit @.lower:entity.user.name"
+      },
+      "home": {
+        "title": "@:entity.user.collection"
+      }
+    }
+  },
+  "table": {
+    "action": {
+      "add": "@:common.new",
+      "changeStatus": "Cambia stato",
+      "changeStatusWithName": "Cambia stato \"{item}\"",
+      "confirmDeletion": "Sei sicuro di voler eliminare questo elemento?",
+      "confirmDeletionWithName": "Sei sicuro di voler eliminare \"{item}\"?",
+      "delete": "Elimina",
+      "deleteWithName": "Elimina \"{item}\"",
+      "display": "Visualizza",
+      "displayWithName": "Visualizza \"{item}\"",
+      "download": "Scarica",
+      "downloadWithName": "Scarica {item}",
+      "duplicate": "Duplica",
+      "duplicateWithName": "Duplica \"{item}\"",
+      "edit": "@:common.edit",
+      "editWithName": "@:common.edit \"{item}\"",
+      "itemDeleted": "Elemento eliminato",
+      "itemDeletedWithName": "\"{item}\" eliminato"
+    }
+  }
+}

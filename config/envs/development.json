@@ -44,7 +44,7 @@
     },
     "baseurl": {
       "schema": "https",
-      "domain": "admin.gam42.it"
+      "domain": "admin.gam42.test"
     }
   },
   "smtp": {
