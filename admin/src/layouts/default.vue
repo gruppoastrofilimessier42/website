@@ -94,44 +94,7 @@ export default {
     },
     menu() {
       return [
-        {
-          icon: "mdi-newspaper",
-          title: `navbar.contents`,
-          children: [
-            {
-              title: "entity.whatsHot.collection",
-              to: "/contents/whats-hots",
-            },
-            {
-              title: "entity.review.collection",
-              to: "/contents/reviews",
-            },
-            {
-              title: "entity.partner.collection",
-              to: "/contents/partners",
-            },
-            {
-              title: "entity.appFeature.collection",
-              to: "/contents/app-features",
-            },
-            {
-              title: "entity.tutorial.collection",
-              to: "/contents/tutorials",
-            },
-            {
-              title: "entity.blogCategory.collection",
-              to: "/contents/blog-categories",
-            },
-            {
-              title: "entity.blogArticle.collection",
-              to: "/contents/blog-articles",
-            },
-            {
-              title: "entity.faq.collection",
-              to: "/contents/faq",
-            },
-          ],
-        },
+        {},
         // {
         //   icon: "mdi-account-tie",
         //   title: `navbar.administration`,

@@ -1,17 +1,7 @@
 const { roles } = require("../src/config/roles");
 const { common, longString } = require("../src/utils/migrationUtils");
 
-const tables = [
-  "whatsHots",
-  "uploads",
-  "uploadsUnfinalized",
-  "translations",
-  "userRoles",
-  "roles",
-  "tokens",
-  "uploadGrants",
-  "users",
-];
+const tables = ["uploads", "uploadsUnfinalized", "translations", "userRoles", "roles", "tokens", "uploadGrants", "users"];
 
 /**
  * @param { import("knex").Knex } knex
@@ -70,35 +60,6 @@ exports.up = async function (knex) {
       table.integer("userId").unsigned().references("id").inTable("users").onDelete("CASCADE").onUpdate("CASCADE");
       table.string("roleCode").references("code").inTable("roles").onDelete("CASCADE").onUpdate("CASCADE");
       table.primary(["userId", "roleCode"]);
-    })
-    .createTable("whatsHots", (table) => {
-      common(table, knex);
-      table
-        .integer("titleTranslationId")
-        .unsigned()
-        .notNullable()
-        .references("id")
-        .inTable("translations")
-        .onDelete("RESTRICT")
-        .onUpdate("CASCADE");
-      table
-        .integer("imageId")
-        .unsigned()
-        .notNullable()
-        .references("id")
-        .inTable("uploads")
-        .onDelete("RESTRICT")
-        .onUpdate("CASCADE");
-      table
-        .integer("descriptionTranslationId")
-        .unsigned()
-        .notNullable()
-        .references("id")
-        .inTable("translations")
-        .onDelete("RESTRICT")
-        .onUpdate("CASCADE");
-      table.dateTime("publishDateTime").defaultTo(knex.fn.now());
-      table.string("link");
     })
     .raw("alter table users add fulltext (first_name,last_name,email)");
   return knex("roles").insert(roles.map((code) => ({ code })));
