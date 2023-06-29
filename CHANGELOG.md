@@ -1,3 +1,10 @@
+# 1.0.0 (2023-06-29)
+
+
+### Features
+
+* scaffold boilerplate ([ac614ed](https://github.com/gruppoastrofilimessier42/website/commit/ac614eda9b02dcf16caddf19bb7fa3dcaa9feae1))
+
 # [3.11.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.10.1...v3.11.0) (2023-06-07)
 
 
