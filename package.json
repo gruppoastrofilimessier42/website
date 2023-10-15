@@ -27,6 +27,8 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@emotion/styled": "^11.11.0",
     "next": "^13.4.4",
     "next-seo": "^6.0.0",
     "next-sitemap": "^4.1.3",
