@@ -1,29 +1,16 @@
 import Header from '@/components/header/Header';
-import '../styles/global.css';
+import { Firebase } from '@/utils/firebase/firebase';
 import { useEffect } from 'react';
-import { Firebase } from '@/utils/Firebase/Firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import '../styles/global.css';
 
 const MyApp = () => {
 
   const initializeFirebase = async () => {
-    const firebase = await Firebase.initialize();
-    console.log(firebase);
+    await Firebase.initialize();
   }
-
-  const initializeDatabase = async () => {
-    const database = await Firebase.initDatabase();
-    console.log(database);
-
-    const querySnapshot = await getDocs(collection(database, 'users'))
-    querySnapshot.forEach((docs) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(docs.id, ' => ', docs.data())
-    })
-  }
+  
   useEffect(() => {
     initializeFirebase();
-    initializeDatabase();
   }, []);
 
 
