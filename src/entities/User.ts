@@ -1,6 +1,5 @@
 import { UserResource } from "@/utils/firebase/resources/user";
 
-
 export class User {
   constructor(public readonly userResource: UserResource){}
 

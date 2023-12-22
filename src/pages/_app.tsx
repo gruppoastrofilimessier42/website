@@ -3,6 +3,7 @@ import { User, UserResource } from '@/entities/User';
 import { getUsers } from '@/services/getUsers';
 import { Firebase } from '@/utils/firebase/firebase';
 import { useEffect, useState } from 'react';
+import {createUser} from '../services/manageUsers';
 import '../styles/global.css';
 
 const MyApp = () => {
@@ -14,11 +15,12 @@ const MyApp = () => {
   }
 
   const setUser = async () => setUsers(await getUsers())
-
+const createUserz = async () => createUser()
   
   useEffect(() => {
     initializeFirebase();
     setUser();
+    createUserz()
   }, []);
 
 
