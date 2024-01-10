@@ -1,11 +1,43 @@
 import { z } from "zod";
 
-export type UserResource = {
+type UserBase = {
+  email: string,
   name: string;
   surname: string;
 }
 
-export const userSchema = z.object({
+export type UserRequest = UserBase & {
+  type: string;
+  password: string,
+}
+
+export type UserResource = UserBase & {
+  id: string;
+  type: {
+    id: string,
+    name: string
+  }
+}
+
+const UserBaseSchema = z.object({
   name: z.string(),
-  surname: z.string()
+  surname: z.string(),
+  email: z.string()
 });
+
+export const userResourceSchema = UserBaseSchema.merge(
+  z.object({
+    id: z.string(),
+    type: z.object({
+      id: z.string(),
+      name: z.string()
+    })
+  })
+);
+
+export const userRequestSchema = UserBaseSchema.merge(
+  z.object({
+    type: z.string(),
+    password: z.string(),
+  })
+);

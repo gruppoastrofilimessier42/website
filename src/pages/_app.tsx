@@ -4,6 +4,7 @@ import { getUsers } from '@/services/getUsers';
 import { Firebase } from '@/utils/firebase/firebase';
 import { useEffect, useState } from 'react';
 import {createUser} from '../services/manageUsers';
+import authService from '../services/auth';
 import '../styles/global.css';
 
 const MyApp = () => {
@@ -14,13 +15,16 @@ const MyApp = () => {
     await Firebase.initialize();
   }
 
-  const setUser = async () => setUsers(await getUsers())
-const createUserz = async () => createUser()
+  const setUser = async () => {
+    await authService.withEmailAndPassword('quentin.block94@ethereal.email', 'cacca123321')
+    setUsers(await getUsers())
+  }
+const createUserz = async () => createUser({name:"aa", surname:"vv", type:"a43n4k-fnlnw-dnwlmxwklmx",email:"quentin.block94@ethereal.email", password:"cacca123321"})
   
   useEffect(() => {
     initializeFirebase();
     setUser();
-    createUserz()
+    // createUserz()
   }, []);
 
 
