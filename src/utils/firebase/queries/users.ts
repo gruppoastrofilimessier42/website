@@ -19,11 +19,13 @@ export const getUserResourceById = async (id: string): Promise<UserResource | nu
   try {
     const db = await getDatabase()
     const userDoc = (await getDoc(doc(db, 'users', id))).data()
-    if (!userDoc) return null
-    userDoc.id = id
-    userDoc.type = {id: userDoc.type}
-    userDoc.type = {...userDoc.type, ...(await getDoc(doc(db, 'users-types', userDoc.type.id))).data()}
     console.log('userDoc :>> ', userDoc)
+    if (!userDoc) return null
+    userDoc.type = (await getDoc(userDoc.type)).data()
+    console.log('userDoc after :>> ', userDoc)
+    // userDoc.id = id
+    // userDoc.type = {id: userDoc.type}
+    // userDoc.type = {...userDoc.type, ...(await getDoc(doc(db, 'users-types', userDoc.type.id))).data()}
 
     return userResourceSchema.parse(userDoc)
 
