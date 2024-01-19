@@ -15,7 +15,9 @@ export type UserResource = UserBase & {
   id: string;
   type: {
     id: string,
-    name: string
+    name: string,
+    reservationLimit: number,
+    sleepingLimit: number
   }
 }
 
@@ -30,7 +32,9 @@ export const userResourceSchema = UserBaseSchema.merge(
     id: z.string(),
     type: z.object({
       id: z.string(),
-      name: z.string()
+      name: z.string(),
+      reservationLimit: z.number(),
+      sleepingLimit: z.number()
     })
   })
 );

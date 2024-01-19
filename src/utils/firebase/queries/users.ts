@@ -14,15 +14,30 @@ export const getUsersResources = async (): Promise<UserResource[]> => {
     return userResources;
 }
 
-export const getUserResourceById = async (id: string): Promise<UserResource> => {
-  const db = await getDatabase();
-  const userDoc = await getDoc(doc(db, 'users', id));
-  return userResourceSchema.parse(userDoc.data());
+
+export const getUserResourceById = async (id: string): Promise<UserResource | null> => {
+  try {
+    const db = await getDatabase()
+    const userDoc = (await getDoc(doc(db, 'users', id))).data()
+    if (!userDoc) return null
+    userDoc.id = id
+    userDoc.type = {id: userDoc.type}
+    userDoc.type = {...userDoc.type, ...(await getDoc(doc(db, 'users-types', userDoc.type.id))).data()}
+    console.log('userDoc :>> ', userDoc)
+
+    return userResourceSchema.parse(userDoc)
+
+  } catch (error) {
+    console.error('Error getting user document:', error)
+    throw error
+  }
 }
 
 
-export const saveUser = async (userRequest: UserRequest) => {
+
+
+export const saveUser = async (userRequest: UserRequest, uid: string) => {
   const db = await getDatabase();
   // TODO settare random ID
-  await setDoc(doc(db, 'users', 'dsdsijsdjio'), userRequest);
+  await setDoc(doc(db, 'users', uid), userRequest);
 }

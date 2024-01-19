@@ -9,8 +9,8 @@ export const createUser = async (userRequest: UserRequest) => {
     const validUserRequest = userRequestSchema.parse(userRequest);
     // const {user} = await createUserWithEmailAndPassword(auth, "quentin.block94@ethereal.email", "Fk7Mw72vXfnsWhRZDM")
     const {user} = await createUserWithEmailAndPassword(auth, validUserRequest.email, validUserRequest.password)
-    await saveUser(validUserRequest);
-    console.log('salvatooo :>> ');
+    await saveUser(validUserRequest, user.uid);
+    console.log('salvatooo :>> ', user);
     // console.log('user :>> ', user);
     await sendEmailVerification(user)
     await auth.signOut()
