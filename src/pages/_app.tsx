@@ -8,6 +8,9 @@ import FormComponent from '@/components/form/FormComponent';
 import auth, {withEmailAndPassword} from '@/utils/firebase/queries/auth'
 import { getAuth } from 'firebase/auth';
 import { set } from 'zod';
+import { MyThemeContextProvider } from '@/stores/global/themeContext';
+import ThemeToggleButton from '@/components/buttons/ThemeToggleButton';
+import MainLayout from '@/components/layouts/MainLayout';
 
 const MyApp = () => {
 
@@ -63,64 +66,76 @@ const MyApp = () => {
     console.log(register)
   }, [register])
 
+  const changeTheme = () => {
+    if(document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.add('light')
+    document.documentElement.classList.remove('dark')
+    } else {
+    document.documentElement.classList.add('dark')
+    document.documentElement.classList.remove('light')
+    }
+  }
+
 
   return (
-    <div style={{ width: '100vw', height: '100vh', justifyContent: 'center', alignItems: 'center' }}>
-      <Header />
-      <p>Ciao Mondo</p>
-      <p>Ciao Mondo numero due</p>
-      <div style={{ maxWidth: 500, maxHeight: 800, backgroundColor: 'grey', padding: 24 }}>
-        {register && <FormComponent onSubmit={createUserz} formType="signup" />}
-        {!register && <FormComponent onSubmit={login} formType="login" />}
-      </div>
-      {!isLoggedIn && <div style={{ zIndex: 99999}}>
-        <button
-          onClick={() => handleClickButton('signup')}
-          style={{
-            padding: 12,
-            width: 124,
-            height: 48,
-            borderRadius: 12,
-            backgroundColor: register ? 'blue' : 'grey',
-            marginInline: 8,
-            marginTop: 16,
-          }}
-        >
-          Register
-        </button>
-        <button
-          onClick={() => handleClickButton('login')}
-          style={{
-            padding: 12,
-            width: 124,
-            height: 48,
-            borderRadius: 12,
-            backgroundColor: !register ? 'green' : 'grey',
-            marginInline: 8,
-            marginTop: 16,
-          }}
-        >
-          Login
-        </button>
-      </div>}
-      {isLoggedIn && <div style={{ zIndex: 99999}}>
-        <button
-          onClick={() => logout()}
-          style={{
-            padding: 12,
-            width: 124,
-            height: 48,
-            borderRadius: 12,
-            backgroundColor: 'red',
-            marginInline: 8,
-            marginTop: 16,
-          }}
-        >
-          Logout
-        </button>
-      </div>}
-      <div>{users.map((user) => user.fullName)}</div>
-    </div>
+    <MyThemeContextProvider>
+      <MainLayout>
+
+        <div style={{ width: '100vw', height: '100vh', justifyContent: 'center', alignItems: 'center' }} className=' dark:bg-gray-700 bg-gray-200'>
+          <div style={{ maxWidth: 500, maxHeight: 800, backgroundColor: 'grey', padding: 24 }}>
+            {register && <FormComponent onSubmit={createUserz} formType="signup" />}
+            {!register && <FormComponent onSubmit={login} formType="login" />}
+          </div>
+          {!isLoggedIn && <div style={{ zIndex: 99999}}>
+            <button
+              onClick={() => handleClickButton('signup')}
+              style={{
+                padding: 12,
+                width: 124,
+                height: 48,
+                borderRadius: 12,
+                backgroundColor: register ? 'blue' : 'grey',
+                marginInline: 8,
+                marginTop: 16,
+              }}
+            >
+              Register
+            </button>
+            <button
+              onClick={() => handleClickButton('login')}
+              style={{
+                padding: 12,
+                width: 124,
+                height: 48,
+                borderRadius: 12,
+                backgroundColor: !register ? 'green' : 'grey',
+                marginInline: 8,
+                marginTop: 16,
+              }}
+            >
+              Login
+            </button>
+          </div>}
+          {isLoggedIn && <div style={{ zIndex: 99999}}>
+            <button
+              onClick={() => logout()}
+              style={{
+                padding: 12,
+                width: 124,
+                height: 48,
+                borderRadius: 12,
+                backgroundColor: 'red',
+                marginInline: 8,
+                marginTop: 16,
+              }}
+            >
+              Logout
+            </button>
+          </div>}
+          <div>{users.map((user) => user.fullName)}</div>
+        </div>
+      </MainLayout>
+    </MyThemeContextProvider>
   )
 };
 

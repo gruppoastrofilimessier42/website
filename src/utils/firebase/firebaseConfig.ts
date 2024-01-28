@@ -9,5 +9,3 @@ export const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: 'G-L2XKPPBV2W',
 }
-
-console.log('firebaseConfig :>> ', firebaseConfig);
