@@ -10,7 +10,7 @@ import { getAuth } from 'firebase/auth';
 import { set } from 'zod';
 import { MyThemeContextProvider } from '@/stores/global/themeContext';
 import ThemeToggleButton from '@/components/buttons/ThemeToggleButton';
-import MainLayout from '@/components/layouts/MainLayout';
+import MainLayout from '@/layouts/MainLayout';
 
 const MyApp = () => {
 
