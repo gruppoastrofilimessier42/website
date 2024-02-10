@@ -1,3 +1,4 @@
+'use client'
 import Header from '@/components/header/Header';
 import { User } from '@/entities/User';
 import { Firebase } from '@/utils/firebase/firebase';
