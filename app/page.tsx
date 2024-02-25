@@ -3,8 +3,8 @@ import Header from '@/components/header/Header';
 import { User } from '@/entities/User';
 import { Firebase } from '@/utils/firebase/firebase';
 import { useEffect, useState } from 'react';
-import {createUser} from '../services/manageUsers';
-import '../styles/global.css';
+import {createUser} from '../src/services/manageUsers';
+import './global.css'
 import FormComponent from '@/components/form/FormComponent';
 import auth, {withEmailAndPassword} from '@/utils/firebase/queries/auth'
 import { getAuth } from 'firebase/auth';
